@@ -1,8 +1,7 @@
 const express = require('express');
-const { getRegions, addRegion } = require('../controllers/regionsController');
 const router = express.Router();
+const { getRegions } = require('../controllers/regionController');
 
 router.get('/', getRegions);
-router.post('/', addRegion);
 
-module.exports = router;
+module.exports = router; // ✅ Make sure we're exporting the router
